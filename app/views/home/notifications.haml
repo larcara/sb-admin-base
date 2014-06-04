@@ -1,0 +1,127 @@
+.row
+  .col-lg-12
+    %h1.page-header Notifications
+  / /.col-lg-12
+/ /.row
+.row
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        Alert Styles
+      / /.panel-heading
+      .panel-body
+        .alert.alert-success
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+        .alert.alert-info
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+        .alert.alert-warning
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+        .alert.alert-danger
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+      / .panel-body
+    / /.panel
+  / /.col-lg-6
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        Dismissable Alerts
+      / /.panel-heading
+      .panel-body
+        .alert.alert-success.alert-dismissable
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+        .alert.alert-info.alert-dismissable
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+        .alert.alert-warning.alert-dismissable
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+        .alert.alert-danger.alert-dismissable
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          = succeed "." do
+            %a.alert-link{:href => "#"} Alert Link
+      / .panel-body
+    / /.panel
+  / /.col-lg-6
+/ /.row
+.row
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        Modals
+      / /.panel-heading
+      .panel-body
+        / Button trigger modal
+        %button.btn.btn-primary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal"}
+          Launch Demo Modal
+        / Modal
+        #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+          .modal-dialog
+            .modal-content
+              .modal-header
+                %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+                %h4#myModalLabel.modal-title Modal title
+              .modal-body
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              .modal-footer
+                %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+                %button.btn.btn-primary{:type => "button"} Save changes
+            / /.modal-content
+          / /.modal-dialog
+        / /.modal
+      / .panel-body
+    / /.panel
+  / /.col-lg-6
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        Tooltips and Popovers
+      / /.panel-heading
+      .panel-body
+        %h4 Tooltip Demo
+        .tooltip-demo
+          %button.btn.btn-default{"data-placement" => "left", "data-toggle" => "tooltip", :title => "Tooltip on left", :type => "button"} Tooltip on left
+          %button.btn.btn-default{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Tooltip on top", :type => "button"} Tooltip on top
+          %button.btn.btn-default{"data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Tooltip on bottom", :type => "button"} Tooltip on bottom
+          %button.btn.btn-default{"data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button"} Tooltip on right
+        %br
+          %h4 Clickable Popover Demo
+          .tooltip-demo
+            %button.btn.btn-default{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "left", "data-toggle" => "popover", :type => "button"}
+              Popover on left
+            %button.btn.btn-default{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "top", "data-toggle" => "popover", :type => "button"}
+              Popover on top
+            %button.btn.btn-default{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "bottom", "data-toggle" => "popover", :type => "button"}
+              Popover on bottom
+            %button.btn.btn-default{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "right", "data-toggle" => "popover", :type => "button"}
+              Popover on right
+      / .panel-body
+    / /.panel
+  / /.col-lg-6
+/ /.row
+/ Page-Level Demo Scripts - Notifications - Use for reference
+:javascript
+  // tooltip demo
+  $('.tooltip-demo').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+  })
+
+  // popover demo
+  $("[data-toggle=popover]")
+      .popover()

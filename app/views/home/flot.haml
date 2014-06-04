@@ -1,0 +1,81 @@
+#page-wrapper
+  .row
+    .col-lg-12
+      %h1.page-header Flot
+    / /.col-lg-12
+  / /.row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading
+          Line Chart Example
+        / /.panel-heading
+        .panel-body
+          .flot-chart
+            #flot-line-chart.flot-chart-content
+    / /.panel-body
+    / /.panel
+    / /.col-lg-12
+    .col-lg-6
+      .panel.panel-default
+        .panel-heading
+          Pie Chart Example
+        / /.panel-heading
+        .panel-body
+          .flot-chart
+            #flot-pie-chart.flot-chart-content
+    / /.panel-body
+    / /.panel
+    / /.col-lg-6
+    .col-lg-6
+      .panel.panel-default
+        .panel-heading
+          Multiple Axes Line Chart Example
+        / /.panel-heading
+        .panel-body
+          .flot-chart
+            #flot-line-chart-multi.flot-chart-content
+    / /.panel-body
+    / /.panel
+    / /.col-lg-6
+    .col-lg-6
+      .panel.panel-default
+        .panel-heading
+          Moving Line Chart Example
+        / /.panel-heading
+        .panel-body
+          .flot-chart
+            #flot-line-chart-moving.flot-chart-content
+    / /.panel-body
+    / /.panel
+    / /.col-lg-6
+    .col-lg-6
+      .panel.panel-default
+        .panel-heading
+          Bar Chart Example
+        / /.panel-heading
+        .panel-body
+          .flot-chart
+            #flot-bar-chart.flot-chart-content
+    / /.panel-body
+    / /.panel
+    / /.col-lg-6
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading
+          Flot Charts Usage
+        / /.panel-heading
+        .panel-body
+          %p
+            Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks, and interactive features. In SB Admin, we are using the most recent version of Flot along with a few plugins to enhance the user experience. The Flot plugins being used are the tooltip plugin for hoverable tooltips, and the resize plugin for fully responsive charts. The documentation for Flot Charts is available on their website,
+            = succeed "." do
+              %a{:href => "http://www.flotcharts.org/", :target => "_blank"} http://www.flotcharts.org/
+          %a.btn.btn-default.btn-lg.btn-block{:href => "http://www.flotcharts.org/", :target => "_blank"} View Flot Charts Documentation
+        / /.panel-body
+      / /.panel
+    / /.col-lg-6
+  / /.row
+/ /#page-wrapper
+/ Page-Level Demo Scripts - Flot - Use for reference
+%script{:src => url_to_javascript("demo/flot-demo.js")}
+
