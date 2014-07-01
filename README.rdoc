@@ -1,28 +1,13 @@
-== README
+== Rails4 + Bootstrap + SB Admin 2 SB.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An empty Rails4 project integrated with 
 
-Things you may want to cover:
+Boostrap3 framework (http://getbootstrap.com/)
+ 
+and
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+SB Admin 2 Free Template (http://startbootstrap.com/sb-admin-v2)
+  
+just clone it and run 
+  bundle install
+  rails s
