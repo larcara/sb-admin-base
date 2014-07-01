@@ -1,4 +1,4 @@
-== Rails4 + Bootstrap + SB Admin 2 SB.
+== Rails4 + Bootstrap + SB Admin 2.
 
 An empty Rails4 project integrated with 
 
