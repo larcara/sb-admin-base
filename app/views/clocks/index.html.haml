@@ -1,0 +1,27 @@
+%h1 Listing clocks
+
+%table.table.table-striped
+  %tr
+    %th Created
+    %th Date
+    %th Time
+    %th User
+    %th Ip
+    %th Action
+    %th Message
+    %th
+    %th
+    %th
+
+  - @clocks.each do |clock|
+    %tr
+      %td= clock.created_at.localtime
+      %td= clock.date
+      %td= clock.time.localtime
+      %td= clock.user
+      %td= clock.ip
+      %td= clock.action
+      %td= clock.message
+      %td= link_to 'Destroy', clock, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+

@@ -1,0 +1,22 @@
+= form_for @setting do |f|
+  - if @setting.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@setting.errors.count, "error")} prohibited this setting from being saved:"
+      %ul
+        - @setting.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :group
+    = f.text_field :group
+  .field
+    = f.label :key
+    = f.text_field :key
+  .field
+    = f.label :value
+    = f.text_field :value
+  .field
+    = f.label :note
+    = f.text_area :note
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @clock.date
+%p
+  %b Time:
+  = @clock.time
+%p
+  %b User:
+  = @clock.user
+%p
+  %b Ip:
+  = @clock.ip
+%p
+  %b Action:
+  = @clock.action
+%p
+  %b Message:
+  = @clock.message
+
+= link_to 'Edit', edit_clock_path(@clock)
+\|
+= link_to 'Back', clocks_path

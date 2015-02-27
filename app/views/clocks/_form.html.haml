@@ -1,0 +1,46 @@
+= form_for @clock , role: "form" do |f|
+  - if @clock.errors.any?
+    .row.well-sm
+      %span.col-xs-12
+        #error_explanation
+          - @clock.errors.full_messages.each do |msg|
+            %h3.bg-danger.well-sm= msg
+  .row.well-sm
+    %span.col-xs-12
+      =f.select :user, options_for_select(users_for_options, @clock.user) ,{include_blank: true}, class: "form-control block"
+  .row.well-sm
+    %span.col-xs-12
+      =password_field_tag :pin, "", class: "form-control block" , placeholder:"insert pin here"
+      -#=f.text_field :ip
+      =f.hidden_field :action, id: "op"
+  .row.well-sm
+    %span.col-xs-6.col-md-6
+      =select_hour(@moment,{ start_hour: 7, end_hour: 24}, {class: "btn btn-lg btn-default btn-block"})
+    %span.col-xs-6.col-md-6
+      =select_minute(@moment, {minute_step: 1}, {class: "btn btn-lg btn-default btn-block"})
+
+    -#%span.col-xs-2
+      -#%button.btn.btn-xs.btn-default.btn-block{:type => "button"} +
+      -#%button.btn.btn-xs.btn-default.btn-block{:type => "button"} -
+  .row.well-sm
+    %span.col-xs-6
+      %button.btn.btn-lg.btn-success.btn-block{id: "entrata", :type => "button"} Entrata
+    %span.col-xs-6
+      %button.btn.btn-lg.btn-danger.btn-block{id: "uscita",:type => "button"} Uscita
+  .row.well-sm
+    %span.col-xs-12
+      %label.col-xs-2.control-label Annotazioni
+      = f.text_area :message, class: "form-control block",  :rows => "3"
+-if flash[:notice]
+  %h3.bg-success.well-sm= flash[:notice]
+
+
+:javascript
+    $(document).ready( function() {
+      $('#entrata').click(function()
+        {$("#op").val("check_in");
+        $("#new_clock").submit();})
+      $('#uscita').click(function()
+          {$("#op").val("check_out");
+          $("#new_clock").submit();})
+    } );

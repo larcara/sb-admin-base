@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem "mysql2"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
@@ -17,6 +18,7 @@ gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+#gem 'jquery_mobile_rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,8 +29,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml'
 gem 'haml-rails'
 
+gem "rspec"  , group: [:development, :test]
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem "seed_dump"
 
 # Use unicorn as the app server
 # gem 'unicorn'

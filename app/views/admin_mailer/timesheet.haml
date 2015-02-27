@@ -1,0 +1,11 @@
+%table{border:1}
+  -@user_data.each do |k,v|
+    %tr
+      %td=k
+      %td=v[:check_in] || "-"
+      %td=v[:check_in_real_time] || "-"
+      %td=v[:check_in_message] || "-"
+      %td=v[:check_out] || "-"
+      %td=v[:check_out_real_time] || "-"
+      %td=v[:check_out_message] || "-"
+
